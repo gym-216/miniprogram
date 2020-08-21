@@ -1,12 +1,16 @@
 {
   "pages":[
     "pages/index/index",
+    "pages/mimi-raw/mini-raw",
+    "pages/mini-framework/mini-framework",
+    "pages/mini-custom/mini-custom",
+    "pages/mini-project/mini-project",
     "pages/logs/logs"
   ],
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "首页",
+    "navigationBarTitleText": "程序世界",
     "navigationBarTextStyle":"black"
   },
   "style": "v2",
