@@ -1,0 +1,31 @@
+<!--pages/custom-components/time/time.wxml-->
+
+<view class="item-ul">
+  <view class="item-ul-date item-ul-li">
+    <text class="ul-li-label">date日期筛选组件</text>
+    <text class="ul-li-content"></text>
+  </view>
+
+  <!-- 日期范围筛选框 -->
+  <view class="page">  
+    <!-- 时间段 -->  
+    <view class="picker_group">  
+      <picker mode="date" value="{{startDate}}"  start="" end="{{limitEndDate}}"  bindchange="bindStartDateChange">  
+        <view class="picker">  
+          {{startDate}} <view class='arrow'></view>
+        </view>  
+      </picker>  
+      至  
+      <picker mode="date" value="{{endDate}}" start="" end="{{limitEndDate}}" bindchange="bindEndDateChange"> 
+        <view class="picker">  
+          {{endDate}} <view class='arrow'></view>
+        </view>  
+      </picker>        
+    </view>  
+  </view>
+
+  <view class="item-ul-calendar item-ul-li">
+    <text class="ul-li-label">calendar日历组件</text>
+    <text class="ul-li-content"></text>
+  </view>
+</view>

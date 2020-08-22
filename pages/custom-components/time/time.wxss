@@ -1,0 +1,41 @@
+/* pages/custom-components/time/time.wxss */
+
+/* date日期筛选 */
+.picker_group {
+  height: 85rpx;
+  line-height: 85rpx;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  font-size: 30rpx;
+  color: #888;
+  /* border-bottom: 1rpx solid #efefef; */
+  margin-bottom: 10px;
+}
+.picker_group picker {
+  background-color: #f5f5f5;
+  color: #888;
+  height: 66rpx;
+  line-height: 66rpx;
+  width: 160px;
+  margin: 0 2%;
+  padding: 0 2%;
+  border: 1rpx solid #f5f5f5;
+  border-radius: 30rpx;
+  text-align: center;
+}
+.picker {
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.arrow {
+  width: 8px;
+  height: 8px;
+  border-top: 3px solid #999;
+  border-right: 3px solid #999;
+  transform: rotate(135deg);
+  margin-left: 15px;
+  margin-top: -4px;
+}

@@ -5,6 +5,8 @@
     "pages/mini-framework/mini-framework",
     "pages/mini-custom/mini-custom",
     "pages/mini-project/mini-project",
+    "pages/custom-components/time/time",
+    "pages/custom-components/chart/chart",
     "pages/logs/logs"
   ],
   "window":{
