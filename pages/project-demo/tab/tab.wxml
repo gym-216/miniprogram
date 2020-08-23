@@ -1,2 +1,9 @@
 <!--pages/project-demo/tab/tab.wxml-->
-<text>pages/project-demo/tab/tab.wxml</text>
+
+<!-- tab list -->
+<view class="weui-cells weui-cells_after-title" style="margin-top:0px">
+    <navigator url="{{item.url}}" class="weui-cell weui-cell_access" hover-class="weui-cell_active" wx:for="{{tabList}}" id="{{item.url}}" wx:key="text">
+        <view class="weui-cell__bd" style="padding-top:10rpx;">{{item.text}}</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </navigator>
+</view>

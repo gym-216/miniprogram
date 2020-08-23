@@ -1,0 +1,18 @@
+<!--pages/project-demo/tab/tab-unfixed/tab-unfixed.wxml-->
+
+<!-- 未固定tab -->
+<view class="nav-tabs">
+    <view class="tab-list  {{currentTab == idx?'active':'default'}}" wx:for="{{tabArray}}" wx:for-index="idx" wx:for-item="itemName" wx:key="status" data-current="{{idx}}" bindtap="swichNav">{{itemName}}</view>
+</view>
+
+<!-- 列表内容 -->
+<view class="{{currentTab == idx?'show':'hidden'}} tab-content" wx:for="{{tabArray}}" wx:key="status" wx:for-index="idx" wx:for-item="itemName">
+  <view wx:for="{{list}}" wx:key="id" wx:for-index="idy" wx:for-item="item">
+    <view class="weui-cells weui-cells_after-title"> 
+      <view class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+          <view class="weui-cell__bd">{{item}}</view>
+          <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+      </view>
+    </view>
+  </view> 
+</view>

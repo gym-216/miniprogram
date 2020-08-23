@@ -8,6 +8,9 @@
     "pages/custom-components/time/time",
     "pages/custom-components/chart/chart",
     "pages/project-demo/tab/tab",
+    "pages/project-demo/tab/tab-unfixed/tab-unfixed",
+    "pages/project-demo/tab/tab-fixed/tab-fixed",
+    "pages/project-demo/tab/tab-select/tab-select",
     "pages/logs/logs"
   ],
   "window":{
