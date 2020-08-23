@@ -47,5 +47,5 @@ Page({
     }else{
       that.createList()
     }  
-  }, 
+  }
 })

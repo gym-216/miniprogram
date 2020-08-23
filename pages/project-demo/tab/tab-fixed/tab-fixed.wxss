@@ -1,1 +1,17 @@
 /* pages/project-demo/tab/tab-fixed/tab-fixed.wxss */
+
+/* 固定tab样式 */
+.nav-tabs{ 
+  position: fixed;
+  top: 16px;
+  left: 16px;
+  right: 16px;
+  padding: 0px;
+}
+.tab-content{
+  position: fixed;
+  top: 79px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
