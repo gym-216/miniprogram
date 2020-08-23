@@ -15,6 +15,9 @@
     "navigationBarTitleText": "程序世界",
     "navigationBarTextStyle":"black"
   },
+  "usingComponents": {
+    "calendar": "/components/calendar/index"
+  },
   "style": "v2",
   "sitemapLocation": "sitemap.json"
 }

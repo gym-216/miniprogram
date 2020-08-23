@@ -28,4 +28,8 @@
     <text class="ul-li-label">calendar日历组件</text>
     <text class="ul-li-content"></text>
   </view>
+
+  <!-- 日历范围选择 -->
+  <!-- 感谢https://github.com/AFAP/XCX-Plugins开源 仍待优化 -->
+  <calendar mode="pickerRange" beginDate="{{startDate}}" endDate="{{endDate}}" minDate="" maxDate="{{limitEndDate}}" />
 </view>
