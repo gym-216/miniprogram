@@ -14,6 +14,10 @@ Page({
       {
         text:'下拉框tab',
         url:'../tab/tab-select/tab-select'
+      },
+      {
+        text:'滑动tab',
+        url:'../tab/tab-swiper/tab-swiper'
       }
     ]
   },

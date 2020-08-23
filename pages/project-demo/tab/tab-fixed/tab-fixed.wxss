@@ -1,4 +1,5 @@
 /* pages/project-demo/tab/tab-fixed/tab-fixed.wxss */
+@import '../tab.wxss';
 
 /* 固定tab样式 */
 .nav-tabs{ 
