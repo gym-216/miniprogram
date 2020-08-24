@@ -18,6 +18,10 @@ Page({
       {
         text:'滑动tab',
         url:'../tab/tab-swiper/tab-swiper'
+      },
+      {
+        text:'对比tab',
+        url:'../tab/tab-compare/tab-compare'
       }
     ]
   },

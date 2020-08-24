@@ -12,6 +12,7 @@
     "pages/project-demo/tab/tab-fixed/tab-fixed",
     "pages/project-demo/tab/tab-select/tab-select",
     "pages/project-demo/tab/tab-swiper/tab-swiper",
+    "pages/project-demo/tab/tab-compare/tab-compare",
     "pages/logs/logs"
   ],
   "window":{
