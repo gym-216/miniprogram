@@ -1,1 +1,84 @@
 /* pages/project-demo/tab/tab-select/tab-select.wxss */
+
+/* tab */
+.nav-tabs{
+  width: 80%;
+  height: 75rpx;
+  display: flex;   
+  position: fixed;
+  top: 0;
+  left: 16px;
+  right: 16px;
+  padding: 0px;
+}
+.tab-content{
+  flex: 1;
+  position: fixed;
+  top: 50px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.default{
+  line-height:75rpx;
+  text-align:center;
+  flex:1;
+  border-bottom:1px solid #eee;
+  color:#888;
+  font-weight:bold;
+  font-size:28rpx;  
+}
+.active{
+  line-height:75rpx;
+  text-align:center;
+  color:#07c160;
+  flex:1;
+  border-bottom:1px solid #07c160;
+  font-weight:bold;
+  font-size:28rpx;
+}
+.show{
+  display:block;
+  flex: 1;
+}
+.hidden{
+  display:none;
+  flex: 1;
+}
+
+/* 下拉框 */
+.select{
+  display: flex;
+}
+.area{
+  margin-top:9px;
+}
+
+/* 箭头 */
+.arrow {
+  margin-left: 9px;
+  margin-top: 15px;
+}
+
+/* 竖分割线 */
+.vLine {
+  border-left: solid 2px #ccc;
+  height: 30px;
+  vertical-align: middle;
+  display: inline-block;
+  margin-top: 10px;
+  margin-left: 13px;
+  margin-right: 13px;
+}
+
+/* 横分割线 */
+.aline {
+  background-color:#E6E3E3;
+  height:1px;
+  margin-top: 48px;
+}
+
+/* 列表上线框 */
+.weui-cells:before{
+  border-top: 1px solid #fff;
+}

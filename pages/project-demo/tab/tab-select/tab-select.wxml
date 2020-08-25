@@ -1,2 +1,28 @@
 <!--pages/project-demo/tab/tab-select/tab-select.wxml-->
-<text>pages/project-demo/tab/tab-select/tab-select.wxml</text>
+
+<!-- tab -->
+<view class="nav-tabs">
+    <!-- 下拉框 -->
+    <view class="select">
+      <text class="area">{{area}}</text>
+      <view class='arrow'></view>
+    </view>
+    <!-- 竖分割线 -->
+    <view class="vLine"></view>
+    <view class="tab-list  {{currentTab == idx?'active':'default'}}" wx:for="{{tabArray}}" wx:key="item" wx:for-index="idx" wx:for-item="itemName" data-current="{{idx}}" bindtap="swichNav">{{itemName}}</view>
+</view>
+
+<!-- 横分割线 -->
+<view class="aline"></view>
+
+<!-- 列表 -->
+<scroll-view scroll-y="true" class="{{currentTab == idx?'show':'hidden'}} tab-content" wx:for="{{tabArray}}" wx:key="list" wx:for-index="idx" wx:for-item="itemName">
+  <view wx:for="{{list}}" wx:key="id" wx:for-index="idy" wx:for-item="item">
+    <view class="weui-cells weui-cells_after-title"> 
+      <view class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+          <view class="weui-cell__bd">{{item}}</view>
+          <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+      </view>
+    </view>
+  </view>
+</scroll-view>
