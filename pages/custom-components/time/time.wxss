@@ -30,3 +30,8 @@
   align-items: center;
   justify-content: center;
 }
+
+.item-ul-li{
+  border-bottom: 1px solid #fff;
+  border-top: 1px solid #eee;
+}

@@ -6,10 +6,12 @@ Page({
     tabArray:["待审批", "已审批"],
     list:[],
     area:'全部责任区',
-    areaList:[]
+    areaList:[],
+    showModalStatus:false
   },
   onLoad: function (options) {
     this.createUnList()
+    this.createAreaList()
   },
   // 造数据
   createUnList: function(){
@@ -49,5 +51,85 @@ Page({
     }else{
       that.createList()
     }  
+  },
+  showModal: function () {
+    // 显示遮罩层
+    var animation = wx.createAnimation({
+     duration: 200,
+     timingFunction: "linear",
+     delay: 0
+    })
+    this.animation = animation
+    animation.translateY(300).step()
+    this.setData({
+     animationData: animation.export(),
+     showModalStatus: true
+    })
+    setTimeout(function () {
+     animation.translateY(0).step()
+     this.setData({
+     animationData: animation.export()
+     })
+    }.bind(this), 200)
+  },
+  hideModal: function () {
+    // 隐藏遮罩层
+    var animation = wx.createAnimation({
+     duration: 200,
+     timingFunction: "linear",
+     delay: 0
+    })
+    this.animation = animation
+    animation.translateY(300).step()
+    this.setData({
+     animationData: animation.export(),
+    })
+    setTimeout(function () {
+     animation.translateY(0).step()
+     this.setData({
+     animationData: animation.export(),
+     showModalStatus: false
+     })
+    }.bind(this), 200)
+  },
+  chooseArea:function(){
+    this.setData({
+      showModalStatus:true
+    })
+  },
+  closeArea:function(){
+    this.setData({
+      showModalStatus:false
+    })
+  },
+  confirmArea:function(e){
+    console.log(e)
+    this.setData({
+      area:e.currentTarget.id,
+      showModalStatus:false
+    })
+    console.log(e.currentTarget.id)
+  },
+  createAreaList: function(){
+    var data = []
+    var count = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T"]  //循环次数
+    data.push({
+      "id": 0,
+      "name":"全部责任区",
+      "status":1
+    })
+    for(var i=1;i<=count.length;i++){
+      var str = "XX自然保护区" + count[i-1]
+      // data[i-1] = str
+      data.push({
+        "id": i,
+        "name":str,
+        "status":0
+      })
+    }
+    this.setData({
+      areaList:data
+    })
+    console.log(this.data.areaList)
   }
 })
