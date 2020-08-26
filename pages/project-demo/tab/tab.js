@@ -16,6 +16,10 @@ Page({
         url:'../tab/tab-select/tab-select'
       },
       {
+        text:'下拉弹框tab',
+        url:'../tab/tab-select-update/tab-select-update'
+      },
+      {
         text:'滑动tab',
         url:'../tab/tab-swiper/tab-swiper'
       },

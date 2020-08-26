@@ -1,0 +1,42 @@
+<!--pages/project-demo/tab/tab-select-update/tab-select-update.wxml-->
+
+<!-- tab -->
+<view class="nav-tabs">
+    <!-- 下拉框 -->
+    <view class="select" bindtap="chooseArea">
+      <text class="area">{{area}}</text>
+      <view class='arrow'></view>
+    </view>
+    <!-- 竖分割线 -->
+    <view class="vLine"></view>
+    <view class="tab-list  {{currentTab == idx?'active':'default'}}" wx:for="{{tabArray}}" wx:key="item" wx:for-index="idx" wx:for-item="itemName" data-current="{{idx}}" bindtap="swichNav">{{itemName}}</view>
+</view>
+
+<!-- 横分割线 -->
+<view class="aline"></view>
+
+<!-- 列表 -->
+<scroll-view scroll-y="true" class="{{currentTab == idx?'show':'hidden'}} tab-content" wx:for="{{tabArray}}" wx:key="list" wx:for-index="idx" wx:for-item="itemName">
+  <view wx:for="{{list}}" wx:key="id" wx:for-index="idy" wx:for-item="item">
+    <view class="weui-cells weui-cells_after-title"> 
+      <view class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+          <view class="weui-cell__bd">{{item}}</view>
+          <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+      </view>
+    </view>
+  </view>
+</scroll-view>
+
+<!-- 区域弹框 -->
+<view class="commodity_screen" bindtap="hideModal" wx:if="{{showModalStatus}}"></view>
+<view animation="{{animationData}}" class="commodity_attr_box" wx:if="{{showModalStatus}}">
+  <scroll-view scroll-y="true" class="content">
+    <view class="item-ul" wx:for="{{areaList}}" wx:key="id" wx:for-index="idy" wx:for-item="item">
+      <view class="item-ul-li" bindtap="confirmArea" id="{{item.name}}">
+        <text class="ul-li-label">{{item.name}}</text>
+        <text class="ul-li-content"></text>
+        <!-- <i wx:if="{{item.status==1 ? true : false}}" class="check-style-equal-width"></i> -->
+      </view>
+    </view>
+  </scroll-view>
+</view>
